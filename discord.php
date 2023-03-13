@@ -21,9 +21,7 @@ class DiscordEmbed
 
         $this->__create_json();
 
-        echo $this->json. "\n\n";
         if(count($fds) >= 0) $this->json = $this->__add_fields();
-        echo $this->json. "\n\n";
     }
 
     public function send(): bool
@@ -85,9 +83,5 @@ class DiscordEmbed
         return $new;
     }
 }
-
-$test = new DiscordEmbed("");
-$test->_CreateEmbed("TEST", "TEST", array("TEST" => ["DES TEST", "true"], "NEW" => ["TEST", "true"]));
-$test->send();
 
 ?>
